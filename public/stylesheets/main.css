@@ -1,0 +1,52 @@
+body {
+    font-family: Ubuntu;
+    background: #e9ebee;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.deleteForm {
+    display: inline;
+}
+
+.navbar-color {
+    background: #337ab7;
+    border: 1px solid #2e6da4;
+    border-radius: 0%;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #2b5aa5;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+     color: #2b5aa5;
+}
+
+.jumbotron {
+    background: 
+    url(https://images.unsplash.com/photo-1522205419828-f5b336fc3931?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7b10bf52b7ea50de3250fe021944e57d&auto=format&fit=crop&w=1050&q=80) 
+    no-repeat 
+    center
+    center;
+    background-size: cover;
+    color: white;
+}

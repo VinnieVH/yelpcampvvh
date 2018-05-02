@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>YelpCamp</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+  </head>
+  <body>
+    <nav class="navbar-color navbar navbar-default">
+      <div class="navbar-item container-fluid">
+              <a href="/campgrounds" class="navbar-brand navbar-left"><i class="fab fa-asymmetrik"></i> YelpCamp</a>
+          <div class="navbar-item collapse navbar-collapse">
+              <ul class="navbar-item nav navbar-nav navbar-right">
+                <%if(!currentUser) {%>
+                  <li class="navbar-item"><a href="/login">Login</a></li>
+                  <li><a href="/register">Sign up</a></li>
+                <% } else { %>
+                  <li class="navbar-item"><a href="#">Signed in as <%=currentUser.username%></a></li>
+                  <li class="navbar-item"><a href="/logout">Logout</a></li>
+                <% } %>
+              </ul>
+          </div>
+      </div>
+    </nav>
+    <div class="container">
+      <% if(error && error.length > 0){ %>
+        <div class="alert alert-danger" role="alert">
+          <%=error%>
+        </div>
+      <% } %>
+      <% if(success && success.length > 0){ %>
+        <div class="alert alert-success" role="alert">
+          <%=success%>
+        </div>
+      <% } %>
+    </div>
+    
